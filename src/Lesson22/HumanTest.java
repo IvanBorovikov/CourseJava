@@ -4,24 +4,23 @@ public class HumanTest {
 //    public HumanTest(String n){
 //        name = n;
 //    }
+    protected String name = "Ivan";
+    protected static int salary = 150;
 
-    public String name = "Ivan";
-    public static int salary = 150;
-    public void work(){
+    protected void work(){
         System.out.println("Работать");
     }
-    public static void rest(){
+    protected static void rest(){
         System.out.println("Отдыхать");
     }
 }
 
 class Student extends HumanTest {
-    public static void main(String[] args) {
-        Student s = new Student();
-        System.out.println(s.name);
-        System.out.println(Student.salary);
-        s.work();
-        Student.rest();
-    }
-
+   public static void main(String[] args) {
+       Student s = new Student();
+       System.out.println(s.name);
+       System.out.println(Student.salary);
+       s.work();
+       Student.rest();
+   }
 }
